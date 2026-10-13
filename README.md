@@ -11,6 +11,7 @@ This project is a simple web calculator, use it to practice Github collaboration
 ## install node.js if not installed yet:
 - download from: [nodejs website](https://nodejs.org/)
 - verify that it is installed correctly:
+- changement
 
 > run in your terminal
 
