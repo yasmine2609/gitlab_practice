@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .calculator {
+            background: #222;
+            padding: 20px;
+            border-radius: 12px;
+            width: 280px;
+        }
+
+        #display {
+            width: 100%;
+            height: 60px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            font-size: 28px;
+            text-align: right;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            background: #eee;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+
+        button {
+            height: 55px;
+            font-size: 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background: #444;
+            color: white;
+        }
+
+        button:hover {
+            background: #666;
+        }
+
+        .operator {
+            background: #ff9500;
+        }
+
+        .operator:hover {
+            background: #e08600;
+        }
+
+        .clear {
+            background: #d9534f;
+        }
+
+        .equals {
+            background: #28a745;
+        }
+
+        .zero {
+            grid-column: span 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="calculator">
+        <input type="text" id="display" value="0" readonly>
+
+        <div class="buttons">
+            <button class="clear" data-action="clear">C</button>
+            <button data-action="delete">DEL</button>
+            <button class="operator" data-operator="/">÷</button>
+            <button class="operator" data-operator="*">×</button>
+
+            <button data-number="7">7</button>
+            <button data-number="8">8</button>
+            <button data-number="9">9</button>
+            <button class="operator" data-operator="-">−</button>
+
+            <button data-number="4">4</button>
+            <button data-number="5">5</button>
+            <button data-number="6">6</button>
+            <button class="operator" data-operator="+">+</button>
+
+            <button data-number="1">1</button>
+            <button data-number="2">2</button>
+            <button data-number="3">3</button>
+            <button class="equals" data-action="calculate">=</button>
+
+            <button class="zero" data-number="0">0</button>
+            <button data-action="decimal">.</button>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
